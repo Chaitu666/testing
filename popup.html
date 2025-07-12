@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Action Recorder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h2>Web Action Recorder</h2>
+  <button id="startBtn">Start Recording</button>
+  <button id="stopBtn" disabled>Stop Recording</button>
+  <div>
+    <label for="repoConfig">Git Repo Config (JSON):</label>
+    <input type="file" id="repoConfig" accept=".json,.js">
+  </div>
+  <div id="actionsSection">
+    <h3>Recorded Actions</h3>
+    <form id="actionsForm"></form>
+    <small>
+      For each action, you can:
+      <ul>
+        <li>Edit the selector</li>
+        <li>Tick 'Assert' and choose an assertion type</li>
+        <li>Optionally, enter a custom validation/assertion instruction (free text)</li>
+      </ul>
+    </small>
+  </div>
+  <button id="generateBtn">Generate Script</button>
+  <pre id="output"></pre>
+  <button id="downloadBtn" style="display:none;">Download Script</button>
+  <script src="popup.js"></script>
+</body>
+</html>
